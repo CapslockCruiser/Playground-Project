@@ -12,11 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        self.window?.makeKeyAndVisible()
+        
+        let initialViewController = InitialViewController(nibName: "InitialViewController", bundle: nil)
+        //let initialViewController = UIViewController.init(nibName: "InitialViewController", bundle: nil) as! InitialViewController//Does not work
+        self.navController = UINavigationController.init(rootViewController: initialViewController)
+        self.navController?.setNavigationBarHidden(false, animated: true)
+        
+        self.window?.rootViewController = self.navController
+        
         return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
