@@ -16,9 +16,9 @@ class InitialViewController: BaseViewController, UIViewControllerTransitioningDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profilePic.layer.cornerRadius = profilePic.layer.frame.size.width/2
-        profilePic.layer.borderWidth = 4.0
-        profilePic.layer.borderColor = UIColor(red:0.62, green:0.48, blue:0.61, alpha:1.0).CGColor
+        
+        profilePic.layer.borderWidth = 5.0
+        profilePic.layer.borderColor = Constants.color5.CGColor
         profilePic.layer.masksToBounds = true
         
     }
@@ -29,6 +29,10 @@ class InitialViewController: BaseViewController, UIViewControllerTransitioningDe
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return nil
+    }
+    
+    override func viewDidLayoutSubviews() {
+        profilePic.layer.cornerRadius = profilePic.frame.size.width/2
     }
     
 }

@@ -18,12 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-7w-xtZ">
+                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ny_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-7w-xtZ">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" red="0.38039215686274508" green="0.38431372549019605" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-hK-4kl" userLabel="Profile_pic">
-                    <rect key="frame" x="246" y="96" width="108" height="108"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-hK-4kl" userLabel="Profile_pic">
+                    <rect key="frame" x="255" y="105" width="90" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Bka-hK-4kl" secondAttribute="height" multiplier="1:1" id="GLe-xA-Tk3"/>
                     </constraints>
@@ -42,6 +42,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ny_bg" width="2340" height="4160"/>
         <image name="profile_pic" width="216" height="216"/>
     </resources>
 </document>
