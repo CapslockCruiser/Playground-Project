@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Playground_Project" customModuleProvider="target">
             <connections>
+                <outlet property="githubImageView" destination="m0S-fb-LMY" id="qqu-gB-ita"/>
+                <outlet property="paragraphTF" destination="QRI-Vx-FKB" id="7bD-kL-3Oe"/>
                 <outlet property="profilePic" destination="Bka-hK-4kl" id="dbY-FC-oyi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="v1y-ZE-59W"/>
             </connections>
@@ -28,20 +30,44 @@
                         <constraint firstAttribute="width" secondItem="Bka-hK-4kl" secondAttribute="height" multiplier="1:1" id="GLe-xA-Tk3"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-Vx-FKB">
+                    <rect key="frame" x="75" y="225" width="450" height="203"/>
+                    <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="0.73838900862068968" colorSpace="calibratedRGB"/>
+                    <string key="text">I'm a mechanical engineer by degree turned a programmer with focus on iOS app development. I've always liked building things and solving problems, and building software that can be used by a multitude of people to tackle real-world challenges has always enthralled me.
+
+I become very passionate about things I care about, which is what led me to become an amateur painter, an enthusiast pianist and a purveyor of classical music, especially Bach.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-fb-LMY">
+                    <rect key="frame" x="255" y="432" width="90" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="m0S-fb-LMY" secondAttribute="height" multiplier="15:8" id="Ziy-oB-eHx"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="QRI-Vx-FKB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="20c-gf-YBM"/>
+                <constraint firstItem="QRI-Vx-FKB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="2Og-rW-F6e"/>
+                <constraint firstItem="m0S-fb-LMY" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="8wE-mH-8LU"/>
                 <constraint firstAttribute="trailing" secondItem="ibG-7w-xtZ" secondAttribute="trailing" id="9UN-Ly-hJk"/>
                 <constraint firstItem="Bka-hK-4kl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="9d1-Ic-C8P"/>
                 <constraint firstItem="Bka-hK-4kl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D3i-73-jPk"/>
                 <constraint firstItem="ibG-7w-xtZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FSx-d6-Xzt"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QRI-Vx-FKB" secondAttribute="bottom" constant="20" id="Fjm-w0-cht"/>
+                <constraint firstItem="QRI-Vx-FKB" firstAttribute="top" secondItem="Bka-hK-4kl" secondAttribute="bottom" constant="30" id="GVv-l9-Sk2"/>
                 <constraint firstItem="Bka-hK-4kl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.5" id="OZt-zV-2qT"/>
                 <constraint firstAttribute="bottom" secondItem="ibG-7w-xtZ" secondAttribute="bottom" id="Ybv-VO-vZ7"/>
+                <constraint firstItem="m0S-fb-LMY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h9Q-E5-mbe"/>
                 <constraint firstItem="ibG-7w-xtZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zPJ-zw-mje"/>
+                <constraint firstItem="m0S-fb-LMY" firstAttribute="top" secondItem="QRI-Vx-FKB" secondAttribute="bottom" constant="4" id="zvS-1k-Kn8"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="github_logo" width="1000" height="410"/>
         <image name="ny_bg" width="2340" height="4160"/>
         <image name="profile_pic" width="216" height="216"/>
     </resources>

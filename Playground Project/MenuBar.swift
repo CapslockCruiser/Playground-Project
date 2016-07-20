@@ -14,7 +14,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = Constants.color3
+        cv.backgroundColor = Constants.color3.colorWithAlphaComponent(0.65)
         cv.dataSource = self
         cv.delegate = self
         return cv

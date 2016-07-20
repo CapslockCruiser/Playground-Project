@@ -18,6 +18,7 @@
 		3D26B4DC1D3B17A5006FACF1 /* Playground_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26B4DB1D3B17A5006FACF1 /* Playground_ProjectUITests.swift */; };
 		3D26B4ED1D3B1914006FACF1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26B4EC1D3B1914006FACF1 /* InitialViewController.swift */; };
 		3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62179B1D3B1C9600D8138D /* BaseViewController.swift */; };
+		3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3D26B4DD1D3B17A5006FACF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D26B4EC1D3B1914006FACF1 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3D62179B1D3B1C9600D8138D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0D422B1D3BFC44001BD141 /* Constants.swift */,
+				3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				3D26B4ED1D3B1914006FACF1 /* InitialViewController.swift in Sources */,
 				3D0D42291D3BFBFD001BD141 /* MenuBar.swift in Sources */,
 				3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */,
+				3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

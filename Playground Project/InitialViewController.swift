@@ -11,16 +11,31 @@ import UIKit
 import QuartzCore
 
 class InitialViewController: BaseViewController, UIViewControllerTransitioningDelegate{
-    
+    @IBOutlet weak var paragraphTF: UILabel!
+    @IBOutlet weak var githubImageView: UIImageView!
     @IBOutlet weak var profilePic: UIImageView!
+    
+    var mask = CALayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profilePic.layer.borderWidth = 5.0
-        profilePic.layer.borderColor = Constants.color5.CGColor
-        profilePic.layer.masksToBounds = true
+        let linkTapGesRec = UITapGestureRecognizer(target: self, action:#selector(InitialViewController.goToGitHub))
+        githubImageView.userInteractionEnabled = true
+        githubImageView.addGestureRecognizer(linkTapGesRec)
         
+        
+        profilePic.layer.borderWidth = 5.0
+        profilePic.layer.borderColor = Constants.color3.CGColor
+        profilePic.layer.masksToBounds = true
+        profilePic.userInteractionEnabled = true
+        let profileTapGestRec = UITapGestureRecognizer(target: self, action:#selector(InitialViewController.showProfilePic))
+        profilePic.addGestureRecognizer(profileTapGestRec)
+        
+    }
+    
+    func showProfilePic(){
+        var transitioner = ProfilePicAnimator()
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -33,6 +48,11 @@ class InitialViewController: BaseViewController, UIViewControllerTransitioningDe
     
     override func viewDidLayoutSubviews() {
         profilePic.layer.cornerRadius = profilePic.frame.size.width/2
+        paragraphTF.layer.cornerRadius = 16
+        paragraphTF.clipsToBounds = true
     }
     
+    func goToGitHub(){
+        UIApplication.sharedApplication().openURL(NSURL.init(string: "https://github.com/CapslockCruiser")!)
+    }
 }
