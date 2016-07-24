@@ -31,4 +31,8 @@ class BaseViewController: UIViewController{
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[menuBar]|", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[menuBar(50)]", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

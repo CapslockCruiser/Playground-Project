@@ -9,6 +9,9 @@
 import UIKit
 
 class ProfilePicAnimator: NSObject, UIViewControllerAnimatedTransitioning{
+    
+    var originFrame = CGRect.zero
+    
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
     }

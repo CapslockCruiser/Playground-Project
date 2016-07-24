@@ -35,7 +35,11 @@ class InitialViewController: BaseViewController, UIViewControllerTransitioningDe
     }
     
     func showProfilePic(){
-        var transitioner = ProfilePicAnimator()
+        
+        let profilePicVC = ProfilePicViewController(nibName: "ProfilePicViewController", bundle: nil)
+        
+        self.navigationController?.pushViewController(profilePicVC, animated: true)
+        //var transitioner = ProfilePicAnimator()
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {

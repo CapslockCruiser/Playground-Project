@@ -64,6 +64,7 @@ I become very passionate about things I care about, which is what led me to beco
                 <constraint firstItem="ibG-7w-xtZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zPJ-zw-mje"/>
                 <constraint firstItem="m0S-fb-LMY" firstAttribute="top" secondItem="QRI-Vx-FKB" secondAttribute="bottom" constant="4" id="zvS-1k-Kn8"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>

@@ -17,6 +17,10 @@
 		3D26B4D11D3B17A5006FACF1 /* Playground_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26B4D01D3B17A5006FACF1 /* Playground_ProjectTests.swift */; };
 		3D26B4DC1D3B17A5006FACF1 /* Playground_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26B4DB1D3B17A5006FACF1 /* Playground_ProjectUITests.swift */; };
 		3D26B4ED1D3B1914006FACF1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26B4EC1D3B1914006FACF1 /* InitialViewController.swift */; };
+		3D2F64AD1D4042A200E05A2D /* ProfilePicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2F64AC1D4042A200E05A2D /* ProfilePicViewController.xib */; };
+		3D2F64AF1D4042BB00E05A2D /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */; };
+		3D36FBD61D4469730081986A /* PaintingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D36FBD51D4469730081986A /* PaintingCell.xib */; };
+		3D36FBD81D4469860081986A /* PaintingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D36FBD71D4469860081986A /* PaintingTableViewController.xib */; };
 		3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62179B1D3B1C9600D8138D /* BaseViewController.swift */; };
 		3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		3D26B4DB1D3B17A5006FACF1 /* Playground_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground_ProjectUITests.swift; sourceTree = "<group>"; };
 		3D26B4DD1D3B17A5006FACF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D26B4EC1D3B1914006FACF1 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		3D2F64AC1D4042A200E05A2D /* ProfilePicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePicViewController.xib; sourceTree = "<group>"; };
+		3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
+		3D36FBD51D4469730081986A /* PaintingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaintingCell.xib; path = ../PaintingCell.xib; sourceTree = "<group>"; };
+		3D36FBD71D4469860081986A /* PaintingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaintingTableViewController.xib; path = ../PaintingTableViewController.xib; sourceTree = "<group>"; };
 		3D62179B1D3B1C9600D8138D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +161,7 @@
 				3D62179B1D3B1C9600D8138D /* BaseViewController.swift */,
 				3D0D42281D3BFBFD001BD141 /* MenuBar.swift */,
 				3D0D422D1D3C56BC001BD141 /* MenuCell.swift */,
+				3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				3D0D42261D3B3ACC001BD141 /* InitialViewController.xib */,
+				3D36FBD51D4469730081986A /* PaintingCell.xib */,
+				3D36FBD71D4469860081986A /* PaintingTableViewController.xib */,
+				3D2F64AC1D4042A200E05A2D /* ProfilePicViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -279,6 +291,9 @@
 				3D26B4C61D3B17A5006FACF1 /* LaunchScreen.storyboard in Resources */,
 				3D26B4C31D3B17A5006FACF1 /* Assets.xcassets in Resources */,
 				3D0D42271D3B3ACC001BD141 /* InitialViewController.xib in Resources */,
+				3D36FBD81D4469860081986A /* PaintingTableViewController.xib in Resources */,
+				3D36FBD61D4469730081986A /* PaintingCell.xib in Resources */,
+				3D2F64AD1D4042A200E05A2D /* ProfilePicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +323,7 @@
 				3D0D422E1D3C56BC001BD141 /* MenuCell.swift in Sources */,
 				3D26B4ED1D3B1914006FACF1 /* InitialViewController.swift in Sources */,
 				3D0D42291D3BFBFD001BD141 /* MenuBar.swift in Sources */,
+				3D2F64AF1D4042BB00E05A2D /* ProfilePicViewController.swift in Sources */,
 				3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */,
 				3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */,
 			);
