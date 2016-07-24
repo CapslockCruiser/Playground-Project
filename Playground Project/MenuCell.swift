@@ -36,7 +36,8 @@ class MenuCell: UICollectionViewCell{
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         
         iconImageView.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
-        iconImageView.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor, constant: 2).active = true
+        iconImageView.centerYAnchor.constraintEqualToAnchor(self.centerYAnchor).active = true
+        //iconImageView.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor, constant: 0).active = true
         
         //let viewsDict: [String: UIView] = ["iV": iconImageView]
         //        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[iV(28)]", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))

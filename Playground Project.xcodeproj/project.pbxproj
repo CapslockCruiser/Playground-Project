@@ -21,6 +21,7 @@
 		3D2F64AF1D4042BB00E05A2D /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */; };
 		3D36FBD61D4469730081986A /* PaintingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D36FBD51D4469730081986A /* PaintingCell.xib */; };
 		3D36FBD81D4469860081986A /* PaintingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D36FBD71D4469860081986A /* PaintingTableViewController.xib */; };
+		3D36FBDA1D447DDD0081986A /* PaintingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36FBD91D447DDD0081986A /* PaintingTableViewController.swift */; };
 		3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62179B1D3B1C9600D8138D /* BaseViewController.swift */; };
 		3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 		3D36FBD51D4469730081986A /* PaintingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaintingCell.xib; path = ../PaintingCell.xib; sourceTree = "<group>"; };
 		3D36FBD71D4469860081986A /* PaintingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaintingTableViewController.xib; path = ../PaintingTableViewController.xib; sourceTree = "<group>"; };
+		3D36FBD91D447DDD0081986A /* PaintingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingTableViewController.swift; sourceTree = "<group>"; };
 		3D62179B1D3B1C9600D8138D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,8 @@
 		3D0D422A1D3BFC33001BD141 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3D0D42281D3BFBFD001BD141 /* MenuBar.swift */,
+				3D0D422D1D3C56BC001BD141 /* MenuCell.swift */,
 				3D0D422B1D3BFC44001BD141 /* Constants.swift */,
 				3DA90AC21D3EF857004B6C57 /* ProfilePicAnimator.swift */,
 			);
@@ -159,9 +163,8 @@
 			children = (
 				3D26B4EC1D3B1914006FACF1 /* InitialViewController.swift */,
 				3D62179B1D3B1C9600D8138D /* BaseViewController.swift */,
-				3D0D42281D3BFBFD001BD141 /* MenuBar.swift */,
-				3D0D422D1D3C56BC001BD141 /* MenuCell.swift */,
 				3D2F64AE1D4042BB00E05A2D /* ProfilePicViewController.swift */,
+				3D36FBD91D447DDD0081986A /* PaintingTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				3D2F64AF1D4042BB00E05A2D /* ProfilePicViewController.swift in Sources */,
 				3D62179C1D3B1C9600D8138D /* BaseViewController.swift in Sources */,
 				3DA90AC31D3EF857004B6C57 /* ProfilePicAnimator.swift in Sources */,
+				3D36FBDA1D447DDD0081986A /* PaintingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

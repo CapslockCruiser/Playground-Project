@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilePicViewController: BaseViewController{
+class ProfilePicViewController: UIViewController{
     
     @IBAction func backButton(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)

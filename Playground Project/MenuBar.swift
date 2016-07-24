@@ -14,7 +14,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = Constants.color3.colorWithAlphaComponent(0.65)
+        cv.backgroundColor = Constants.color3.colorWithAlphaComponent(0.75)
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -60,7 +60,13 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        switch indexPath.row {
+        case 2:
+            let paintingTableVC = PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil)
+            
+        default:
+            break
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

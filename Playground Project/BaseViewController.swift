@@ -29,7 +29,7 @@ class BaseViewController: UIViewController{
         view.addSubview(menuBar)
         menuBar.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[menuBar]|", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[menuBar(50)]", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[menuBar(40)]", options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
     }
     
     override func prefersStatusBarHidden() -> Bool {
