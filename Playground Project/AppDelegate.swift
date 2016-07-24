@@ -19,15 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()
         
-        let pageViewController = CustomPageViewController()
-        
-        let initialViewController = InitialViewController(nibName: "InitialViewController", bundle: nil)
+        //Option 1
+        //let initialViewController = InitialViewController(nibName: "InitialViewController", bundle: nil)
         //let initialViewController = UIViewController.init(nibName: "InitialViewController", bundle: nil) as! InitialViewController//Does not work
-        self.navController = UINavigationController.init(rootViewController: initialViewController)
-        self.navController?.setNavigationBarHidden(false, animated: true)
-        
-        self.window?.rootViewController = pageViewController
+        //self.navController = UINavigationController.init(rootViewController: initialViewController)
+        //self.navController?.setNavigationBarHidden(false, animated: true)
         //self.window?.rootViewController = self.navController
+        
+        
+        //Option 2
+        //let pageViewController = CustomPageViewController()
+        //self.window?.rootViewController = pageViewController
+        
+        //Option 3
+        let baseViewController = BaseViewController()
+        self.window?.rootViewController = baseViewController
         
         return true
         

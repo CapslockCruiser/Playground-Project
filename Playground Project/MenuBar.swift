@@ -62,8 +62,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 2:
-            let paintingTableVC = PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil)
-            
+            //let paintingTableVC = PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil)
+            break
         default:
             break
         }

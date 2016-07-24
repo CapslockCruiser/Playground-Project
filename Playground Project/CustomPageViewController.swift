@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
-    var pages: [BaseViewController] = []
+    var pages: [UIViewController] = []
     
     init(){
         super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
@@ -31,13 +31,13 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDelega
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController as! BaseViewController)!
+        let currentIndex = pages.indexOf(viewController)!
         let previousIndex = abs((currentIndex - 1) % pages.count)
         return pages[previousIndex]
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController as! BaseViewController)!
+        let currentIndex = pages.indexOf(viewController)!
         let nextIndex = abs((currentIndex + 1) % pages.count)
         return pages[nextIndex]
     }

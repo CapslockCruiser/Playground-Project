@@ -9,14 +9,27 @@
 import Foundation
 import UIKit
 
-class BaseViewController: UIViewController{
+class BaseViewController: UIViewController, UIPageViewControllerDataSource{
+    
+    let pageViewController = CustomPageViewController() 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = Constants.color5
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red:0.80, green:0.61, blue:0.95, alpha:1.0), NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 19)!]
         self.navigationController?.navigationBarHidden = true
         
+        setupPageVC()
         setupMenuBar()
+        
+    }
+    
+    private func setupPageVC(){
+        
+        pageViewController.view.frame = self.view.frame
+        //pageViewController.delegate = self
+        pageViewController.dataSource = self
+        self.view.addSubview(pageViewController.view)
     }
     
     let menuBar: MenuBar = {
@@ -34,5 +47,17 @@ class BaseViewController: UIViewController{
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        let currentIndex = (pageViewController as! CustomPageViewController).pages.indexOf(viewController)!
+        let previousIndex = abs((currentIndex - 1) % (pageViewController as! CustomPageViewController).pages.count)
+        return (pageViewController as! CustomPageViewController).pages[previousIndex]
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        let currentIndex = (pageViewController as! CustomPageViewController).pages.indexOf(viewController)!
+        let nextIndex = abs((currentIndex + 1) % (pageViewController as! CustomPageViewController).pages.count)
+        return (pageViewController as! CustomPageViewController).pages[nextIndex]
     }
 }

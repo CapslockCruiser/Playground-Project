@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import QuartzCore
 
-class InitialViewController: BaseViewController, UIViewControllerTransitioningDelegate{
+class InitialViewController: UIViewController, UIViewControllerTransitioningDelegate{
     @IBOutlet weak var paragraphTF: UILabel!
     @IBOutlet weak var githubImageView: UIImageView!
     @IBOutlet weak var profilePic: UIImageView!
