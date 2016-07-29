@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
+class CustomPageViewController: UIPageViewController{
     var pages: [UIViewController] = []
     
     init(){
@@ -21,25 +21,21 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
-        self.dataSource = self
-        pages.append(InitialViewController(nibName: "InitialViewController", bundle: nil))
-        pages.append(AppsViewController(nibName: "AppsViewController", bundle: nil))
-        pages.append(PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil))
+        let initialVC = InitialViewController(nibName: "InitialViewController", bundle: nil)
+        initialVC.view.tag = 0
+        let appsVC = AppsViewController(nibName: "AppsViewController", bundle: nil)
+        appsVC.view.tag = 1
+        let paintingVC = PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil)
+        paintingVC.view.tag = 2
+        let resumeVC = ResumeViewController(nibName: "ResumeViewController", bundle: nil)
+        resumeVC.view.tag = 3
+        
+        pages.append(initialVC)
+        pages.append(appsVC)
+        pages.append(paintingVC)
+        pages.append(resumeVC)
         
         setViewControllers([pages[0]], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController)!
-        let previousIndex = abs((currentIndex - 1) % pages.count)
-        return pages[previousIndex]
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController)!
-        let nextIndex = abs((currentIndex + 1) % pages.count)
-        return pages[nextIndex]
     }
     
     override func prefersStatusBarHidden() -> Bool {

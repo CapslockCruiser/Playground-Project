@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 import QuartzCore
 
-class InitialViewController: UIViewController, UIViewControllerTransitioningDelegate{
+class InitialViewController: UIViewController{
     @IBOutlet weak var paragraphTF: UILabel!
     @IBOutlet weak var githubImageView: UIImageView!
     @IBOutlet weak var profilePic: UIImageView!
     
+    var transitioner = ProfilePicAnimator()
     var mask = CALayer()
+    var profilePicVC: ProfilePicViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,6 @@ class InitialViewController: UIViewController, UIViewControllerTransitioningDele
         let linkTapGesRec = UITapGestureRecognizer(target: self, action:#selector(InitialViewController.goToGitHub))
         githubImageView.userInteractionEnabled = true
         githubImageView.addGestureRecognizer(linkTapGesRec)
-        
         
         profilePic.layer.borderWidth = 5.0
         profilePic.layer.borderColor = Constants.color3.CGColor
@@ -36,18 +37,11 @@ class InitialViewController: UIViewController, UIViewControllerTransitioningDele
     
     func showProfilePic(){
         
-        let profilePicVC = ProfilePicViewController(nibName: "ProfilePicViewController", bundle: nil)
-         
-        self.navigationController?.pushViewController(profilePicVC, animated: true)
-        //var transitioner = ProfilePicAnimator()
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        profilePicVC = ProfilePicViewController(nibName: "ProfilePicViewController", bundle: nil)
+        profilePicVC!.transitioningDelegate = self
+        
+        self.view.window?.rootViewController!.presentViewController(profilePicVC!, animated: false, completion: nil)
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,5 +52,13 @@ class InitialViewController: UIViewController, UIViewControllerTransitioningDele
     
     func goToGitHub(){
         UIApplication.sharedApplication().openURL(NSURL.init(string: "https://github.com/CapslockCruiser")!)
+    }
+}
+
+extension InitialViewController: UIViewControllerTransitioningDelegate{
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transitioner.originFrame = self.view.frame
+        return transitioner
     }
 }

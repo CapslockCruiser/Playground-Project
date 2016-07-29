@@ -9,6 +9,9 @@
 import UIKit
 
 class PaintingTableViewController: UIViewController{
+    
+    let pageIndex = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()

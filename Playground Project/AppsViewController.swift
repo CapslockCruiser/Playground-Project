@@ -9,6 +9,9 @@
 import UIKit
 
 class AppsViewController: UIViewController{
+    
+    let pageIndex = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()

@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppsViewController" customModule="Playground_Project" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeViewController" customModule="Playground_Project" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="UaC-yY-MSa"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dUJ-fo-mNJ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

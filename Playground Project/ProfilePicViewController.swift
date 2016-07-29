@@ -11,7 +11,7 @@ import UIKit
 class ProfilePicViewController: UIViewController{
     
     @IBAction func backButton(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {

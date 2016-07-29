@@ -9,6 +9,11 @@
 
 import UIKit
 
+
+protocol MenuBarDelegate: class{
+    func didSelectMenuItem(index: Int)
+}
+
 class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     lazy var collectionView: UICollectionView = {
@@ -22,6 +27,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     let cellId = "cellId"
     let imageNames = ["home_icon", "computer_icon", "painting_icon", "resume_icon"]
+    weak var delegate: MenuBarDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,13 +66,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-        case 2:
-            //let paintingTableVC = PaintingTableViewController(nibName: "PaintingTableViewController", bundle: nil)
-            break
-        default:
-            break
-        }
+        delegate?.didSelectMenuItem(indexPath.row)
     }
     
     required init?(coder aDecoder: NSCoder) {

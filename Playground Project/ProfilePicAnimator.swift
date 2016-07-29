@@ -17,7 +17,33 @@ class ProfilePicAnimator: NSObject, UIViewControllerAnimatedTransitioning{
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let viewToBePresented = transitionContext.viewForKey(UITransitionContextToViewKey)//View controller to be presented
-        let originialView = transitionContext.viewForKey(UITransitionContextFromViewKey)//Original view controller
+        let container = transitionContext.containerView()
+        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        
+        let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
+        let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
+        
+        toView.transform = offScreenRight
+        
+        container!.addSubview(toView)
+        container!.addSubview(fromView)
+        
+        let duration = self.transitionDuration(transitionContext)
+        
+        UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.AllowAnimatedContent, animations:  {
+            
+            fromView.transform = offScreenLeft
+            toView.transform = CGAffineTransformIdentity
+            
+            }, completion: { finished in
+                
+                transitionContext.completeTransition(true)
+                
+        })
+    }
+    
+    func animationEnded(transitionCompleted: Bool) {
+        
     }
 }
